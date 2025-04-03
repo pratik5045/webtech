@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Data in contact.dat</h1>
+  <button onclick="loadData()"> click me to fetch data</button>
+  <table id="table" border="1">
+    <tr><th>Sr. No</th>
+      <th>Name</th>
+      <th>Residence Number</th>
+      <th>Mobile Number</th>
+      <th>Address</th>
+  </tr>
+  </table>
+ <script>
+  function loadData(){
+    var xhr=new XMLHttpRequest();
+    var i;
+    xhr.open("GET","contact.dat");
+    const table=document.getElementById("table");
+    xhr.onload=function(){
+    if(xhr.status===200)
+    {
+      const lines = xhr.responseText.split("\n");
+      lines.forEach(line=>{
+        const [srno, name, resNumber, mobile, address]=line.split(",");
+        const row = `<tr>
+                            <td>${srno}</td>
+                            <td>${name}</td>
+                            <td>${resNumber}</td>
+                            <td>${mobile}</td>
+                            <td>${address}</td>
+                        </tr>`;
+           table.innerHTML+=row;
+      })
+    } 
+    else
+      alert("failed to load data");
+    }
+    xhr.send();
+   
+  }
+ </script>
+</body>
+</html>

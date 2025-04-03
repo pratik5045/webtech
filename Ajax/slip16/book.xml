@@ -1,0 +1,20 @@
+<books>
+  <book>
+      <title>Introduction to Algorithms</title>
+      <author>Thomas H. Cormen</author>
+      <year>2009</year>
+      <price>$45</price>
+  </book>
+  <book>
+      <title>Clean Code</title>
+      <author>Robert C. Martin</author>
+      <year>2008</year>
+      <price>$40</price>
+  </book>
+  <book>
+      <title>Design Patterns</title>
+      <author>Erich Gamma</author>
+      <year>1994</year>
+      <price>$50</price>
+  </book>
+</books>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Items>
+<item>
+<item-name> aata</item-name> 
+<item-rate> 1000</item-rate>
+<quantity>10</quantity>
+</item>
+<item>
+<item-name> chapati</item-name> 
+<item-rate> 10</item-rate>
+<quantity>10</quantity>
+</item>
+<item>
+<item-name> rice</item-name> 
+<item-rate> 100</item-rate>
+<quantity>10</quantity>
+</item>
+<item>
+<item-name> mango</item-name> 
+<item-rate> 150</item-rate>
+<quantity>20</quantity>
+</item>
+<item>
+<item-name> banana</item-name> 
+<item-rate> 50</item-rate>
+<quantity>100</quantity>
+</item>
+</Items>

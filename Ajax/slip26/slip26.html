@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+select name:
+  <select id="name" onchange="getDetails()">
+      <option value="">-- Select a emp --</option>
+      <option value="onkar">onkar</option>
+  </select>
+  <h3> Details:</h3>
+  <div id="Details"></div>
+  <script>
+    function getDetails(){
+      const name=document.getElementById("name").value;
+      const details=document.getElementById("Details");
+      const xhr= new XMLHttpRequest();
+      xhr.open("GET",`slip26.php?name=${name}`,true)
+      xhr.onload=function()
+      {
+        if(xhr.status===200)
+      {
+          details.innerHTML=xhr.responseText
+      }else{
+        details.innerHTML="error"
+      }
+      }
+      xhr.send();
+    }
+  </script>
+</body>
+</html>

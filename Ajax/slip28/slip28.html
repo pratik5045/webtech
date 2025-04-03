@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form onsubmit="validate(event)">
+    name:<input type="text" id="name">
+   
+    password:<input type="text" id="password">
+    <input type="submit">
+  </form>
+  <h3 id="msg"></h3>
+  <script>
+    function validate(event){
+      event.preventDefault();
+      const name=document.getElementById("name").value;
+      const password=document.getElementById("password").value;
+      const msg=document.getElementById("msg");
+      const xhr=new XMLHttpRequest();
+      xhr.open("GET",`slip28.php?name=${name}&password=${password}`,true);
+      xhr.onload=function()
+      {
+        if(xhr.status===200)
+      {
+          msg.innerText=xhr.responseText;
+      }
+      else{
+
+        msg.innerText="error"
+      }
+      }
+      xhr.send();
+    }
+  </script>
+</body>
+</html>

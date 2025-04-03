@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Details</title>
+</head>
+<body>
+  <h2>Enter Student Name</h2>
+  <input 
+    type="text" 
+    id="studentName" 
+    placeholder="Enter name"
+    onblur="checkName()" 
+    onclick="showImage()"
+  >
+
+  <br><br>
+
+  <img 
+    id="studentImage" 
+    src="https://imgs.search.brave.com/NrlZu-RbjGqH--zt6qRLLqua63hgRZuuRQziGS5ua1U/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9waXhs/ci5jb20vaW1hZ2Vz/L2luZGV4L2FpLWlt/YWdlLWdlbmVyYXRv/ci1vbmUud2VicA"
+    style="display:none; width:150px; height:150px;" 
+    onmouseover="this.style.width='200px'" 
+    onmouseout="this.style.width='150px'"
+  >
+
+  <script>
+    function checkName() {
+      var name = document.getElementById("studentName").value;
+      if (name) {
+        document.getElementById("studentName").style.color = "red";
+        document.getElementById("studentName").style.fontSize = "18px";
+      }
+    }
+
+    function showImage() {
+      if (!document.getElementById("studentName").value.trim()) {
+        document.getElementById("studentImage").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

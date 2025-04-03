@@ -1,0 +1,40 @@
+<Bookstore>
+    <Category name="Yoga">
+        <Book>
+            <Book_Title>Light on Yoga</Book_Title>
+            <Book_Author>B.K.S. Iyengar</Book_Author>
+            <Book_Price>450</Book_Price>
+        </Book>
+        <Book>
+            <Book_Title>The Heart of Yoga</Book_Title>
+            <Book_Author>T.K.V. Desikachar</Book_Author>
+            <Book_Price>550</Book_Price>
+        </Book>
+    </Category>
+
+    <Category name="Story">
+        <Book>
+            <Book_Title>The Alchemist</Book_Title>
+            <Book_Author>Paulo Coelho</Book_Author>
+            <Book_Price>300</Book_Price>
+        </Book>
+        <Book>
+            <Book_Title>Panchatantra</Book_Title>
+            <Book_Author>Vishnu Sharma</Book_Author>
+            <Book_Price>250</Book_Price>
+        </Book>
+    </Category>
+
+    <Category name="Technical">
+        <Book>
+            <Book_Title>Introduction to Algorithms</Book_Title>
+            <Book_Author>Thomas H. Cormen</Book_Author>
+            <Book_Price>950</Book_Price>
+        </Book>
+        <Book>
+            <Book_Title>Clean Code</Book_Title>
+            <Book_Author>Robert C. Martin</Book_Author>
+            <Book_Price>850</Book_Price>
+        </Book>
+    </Category>
+</Bookstore>

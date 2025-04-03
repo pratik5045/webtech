@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function accept(){
+    var name=document.getElementById("name").value;
+    var pass=document.getElementById("pass").value;
+    if(!name)
+     {
+         alert("enter name properly")
+         return false;
+     }
+     if(!pass && pass.length<8)
+     {
+      alert('password must of lenght >8')
+      return false;
+     }
+     alert("Form submitted successfully!");
+     return true;
+
+  }
+  </script>
+  <form method="post" onsubmit="return accept()">
+    Enter Username:<input type="text" name="uname" id="name">
+    Enter Password:<input type="text" name="pass" id="pass">
+    <input type="submit" >
+</body>
+</html>

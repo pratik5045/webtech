@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Enter suggestion <input type="text" oninput="display()"id="input">
+  <p id="msg"></p>
+  <script>
+    function display()
+    {
+      const input=document.getElementById("input").value;
+      const msg=document.getElementById("msg");
+      const xhr=new XMLHttpRequest();
+      xhr.open("GET",`slip15.php?input=${input}`,true);
+      xhr.onload=function(){
+        if(xhr.status===200)
+      {
+            msg.innerHTML=xhr.responseText;
+      }
+      else{
+         msg.innerText="error";
+      }
+      }
+      xhr.send();
+    }
+  </script>
+</body>
+</html>

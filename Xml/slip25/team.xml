@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<CricketTeam>
+    <Team country="Australia">
+        <player>David Warner</player>
+        <runs>7500</runs>
+        <wicket>0</wicket>
+    </Team>
+<Team country="india"><player>virat</player><run>100</run><wicket>0</wicket><player>rohit</player><run>100</run><wicket>2</wicket></Team></CricketTeam>

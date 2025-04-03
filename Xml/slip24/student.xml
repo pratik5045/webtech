@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<students>
+<student>
+<sno>1</sno>
+<sname>onkar</sname>
+<saddr>takli</saddr>
+<college>pvp</college>
+<course>cs</course>
+</student>
+<student>
+<sno>2</sno>
+<sname>sahil</sname>
+<saddr>akole</saddr>
+<college>pvp</college>
+<course>cs</course>
+</student>
+</students>

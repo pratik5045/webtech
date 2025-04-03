@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <title>The Alchemist</title>
+        <author>Paulo Coelho</author>
+        <price>499</price>
+        <publisher>HarperCollins</publisher>
+    </book>
+    <book>
+        <title>Wings of Fire</title>
+        <author>A. P. J. Abdul Kalam</author>
+        <price>350</price>
+        <publisher>Universities Press</publisher>
+    </book>
+</books>

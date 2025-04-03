@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Book Details Finder</h1>
+  Select a Book:
+  <select id="bookSelect" onchange="getBookDetails()">
+      <option value="">-- Select a Book --</option>
+      <option value="Introduction to Algorithms">Introduction to Algorithms</option>
+      <option value="Clean Code">Clean Code</option>
+      <option value="Design Patterns">Design Patterns</option>
+  </select>
+  <h3>Book Details:</h3>
+  <div id="bookDetails"></div>
+  <script>
+    function getBookDetails(){
+      const selectedbook=document.getElementById("bookSelect").value;
+      const bookdetails=document.getElementById("bookDetails");
+      const xhr= new XMLHttpRequest();
+      xhr.open("GET","book.xml",true)
+      xhr.onload=function()
+      {
+        if(xhr.status===200)
+      {
+            const xmldoc=xhr.responseXML;
+            const book=xmldoc.getElementsByTagName("book");
+            for(var i=0;i<book.length;i++)
+            {
+              const title=book[i].getElementsByTagName("title")[0].textContent;
+              if(title===selectedbook)
+            {
+             const author=book[i].getElementsByTagName('author')[0].textContent;
+             const year=book[i].getElementsByTagName('year')[0].textContent;
+             const price=book[i].getElementsByTagName('price')[0].textContent;
+             bookdetails.innerHTML=`${title}<br>${author}<br>${year}<br> ${price} <br>`
+            }
+            }
+      }else{
+        bookdetails.innerHTML="error"
+      }
+      }
+      xhr.send();
+    }
+  </script>
+</body>
+</html>
